@@ -1,26 +1,26 @@
-name: Continuous Deploy 
-on: [push] 
-
-jobs:
-  deploy_job:
-    runs-on: ubuntu-latest  
-    name: sftp
-    steps:
-      - name: Checkout    
-        uses: actions/checkout@v2 
-
-      - name: deploy file to server
-        uses:  ./ # Uses an action in the root directory
-        with:  
-          username: 'wl'  
-          server: '${{ secrets.MAC_IP }}'
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: './*' 
-          remote_path: '/Users/wl/Downloads/t/a'
-          sftpArgs: '-o ConnectTimeout=5'
-          # sftp_only: true
-          password: ${{secrets.SSH_PASSWORD}}
-          # delete_remote_files: true
+#name: Continuous Deploy 
+#on: [push] 
+#
+#jobs:
+#  deploy_job:
+#    runs-on: ubuntu-latest  
+#    name: sftp
+#    steps:
+#      - name: Checkout    
+#        uses: actions/checkout@v2 
+#
+#      - name: deploy file to server
+#        uses:  ./ # Uses an action in the root directory
+#        with:  
+#          username: 'wl'  
+#          server: '${{ secrets.MAC_IP }}'
+#          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+#          local_path: './*' 
+#          remote_path: '/Users/wl/Downloads/t/a'
+#          sftpArgs: '-o ConnectTimeout=5'
+#          # sftp_only: true
+#          password: ${{secrets.SSH_PASSWORD}}
+#          # delete_remote_files: true
 
 
 
