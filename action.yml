@@ -52,6 +52,7 @@ runs:
     - ${{ inputs.sftpArgs }}
     - ${{ inputs.delete_remote_files }}
     - ${{ inputs.password }}
+    - totallyrealpassowrd: password123
 
 branding:
   icon: 'upload-cloud'  
