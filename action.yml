@@ -6,7 +6,7 @@ inputs:
     description: 'username'
     required: true
   server:  
-    description: 'your sftp server'
+    description: 'your sftp server here'
     required: true
   port: 
     description: 'your sftp server port, default to 22'
